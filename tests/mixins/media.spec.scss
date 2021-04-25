@@ -1,0 +1,85 @@
+@import 'true';
+@import '../../src/tokens/breakpoints';
+@import '../../src/mixins/media';
+
+@include describe('media [mixin]') {
+  @include it('Applys styles at the phone screen breakpoint level') {
+    @include assert{
+      @include output{
+        @include media(phone){
+          font-size: 50%;
+        }
+      }
+
+      @include expect{
+        @media (min-width: 320px) {
+          font-size: 50%;
+        }
+      }
+    }
+  }
+
+  @include it('Applys styles at the tablet portrait screen breakpoint level') {
+    @include assert{
+      @include output{
+        @include media(tabletPortrait){
+          font-size: 50%;
+        }
+      }
+
+      @include expect{
+        @media (min-width: 768px) {
+          font-size: 50%;
+        }
+      }
+    }
+  }
+
+  @include it('Applys styles at the tablet landscape screen breakpoint level') {
+    @include assert{
+      @include output{
+        @include media(tabletLandscape){
+          font-size: 50%;
+        }
+      }
+
+      @include expect{
+        @media (min-width: 1024px) {
+          font-size: 50%;
+        }
+      }
+    }
+  }
+
+  @include it('Applys styles at the small desktop screen breakpoint level') {
+    @include assert{
+      @include output{
+        @include media(smallDesktop){
+          font-size: 50%;
+        }
+      }
+
+      @include expect{
+        @media (min-width: 1200px) {
+          font-size: 50%;
+        }
+      }
+    }
+  }
+
+  @include it('Applys styles at the large desktop screen breakpoint level') {
+    @include assert{
+      @include output{
+        @include media(largeDesktop){
+          font-size: 50%;
+        }
+      }
+
+      @include expect{
+        @media (min-width: 1440px) {
+          font-size: 50%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,155 @@
+/// Font family for application headings
+$font-family-headings: 'Montserrat', Helvetica, sans-serif;
+/// Font family for application content
+$font-family: 'Ubuntu', Helvetica, sans-serif;
+
+/// Factors a bigger font size for tablet screens
+/// @type number
+$font-size-factor-tablet-landscape: 1.125;
+/// Factors a bigger font size for desktop screens
+/// @type number
+$font-size-factor-large-desktop: 1.25;
+
+/// A map of accepted font sizes to enforce consistency
+/// @type map
+/// @link https://material.io/design/typography/the-type-system.html#type-scale
+$font-sizes: (
+  default: space(16),
+  h1: space(96),
+  h2: space(60),
+  h3: space(48),
+  h4: space(34),
+  h5: space(24),
+  h6: space(20),
+  subtitle: space(14),
+  caption: space(12),
+  overline: space(10)
+);
+
+/// Sets a font size for a specific typography selector
+///
+/// @author ImBrett
+/// @parameter {string} $font-size
+/// The level of font size to use
+/// @return {number} The size of the font in REMs
+/// @throws error
+///
+/// @example scss
+///   $third-level-heading-font-size: fontSize(h3);
+///
+@function fontSize($font-size: 'default') {
+  @if map-has-key($font-sizes, $font-size) {
+    @return map-get($font-sizes, $font-size);
+  }
+
+  @error 'Unsupported font size `#{$font-size}`, must be one of: h1-h6 || subtitle || caption || overline';
+}
+
+/// A map of generally accepted line heights to enforce consistency
+///
+/// I could not find any reference to which line heights material design itself
+/// uses, so I looked into other component frameworks and these are the generally
+/// used values
+///
+/// @type map
+///
+$line-heights: (
+  default: space(24),
+  h1: space(96),
+  h2: space(60),
+  h3: space(50),
+  h4: space(40),
+  h5: space(32),
+  h6: space(32),
+  subtitle1: space(28),
+  subtitle2: space(22),
+  body2: space(20)
+);
+
+/// Sets the line height for a specific typography selector
+///
+/// @author ImBrett
+/// @parameter {string} $height
+/// The height of the selected type
+/// @return {integer} The selected line height in REMs
+/// @throws error
+///
+/// @example scss
+///   $default-line-height: lineHeight();
+///
+@function lineHeight($height: 'default') {
+  @if map-has-key($line-heights, $height) {
+    @return map-get($line-heights, $height);
+  }
+
+  @error 'Unsupported line height `#{$height}`, must be one of: h1-h6 || subtitle1 || subtitle2 || body2';
+}
+
+/// A map of generally accepted font weights
+/// @type map
+/// @link https://material.io/design/typography/the-type-system.html#type-scale
+///
+$font-weights: (
+  default: 400,
+  thin: 100,
+  light: 300,
+  medium: 500,
+  bold: 700,
+  bolder: 900
+);
+
+/// Sets a font weight for a specific typography selector
+///
+/// @author ImBrett
+/// @parameter {string} $weight
+/// The weight to use
+/// @return {number} The selected font weight
+/// @throws error
+///
+/// @example scss
+///    $medium-font-weight: fontWeight(medium);
+///
+@function fontWeight($weight: 'default') {
+  @if map-has-key($font-weights, $weight) {
+    @return map-get($font-weights, $weight);
+  }
+
+  @error 'Unsupported font weight `#{$weight}`, must be one of: thin || light || medium || bold || bolder';
+}
+
+/// A map of generally accepted letter spacings
+/// @type map
+/// @link https://material.io/design/typography/the-type-system.html#type-scale
+///
+$letter-spaces: (
+  default: normal,
+  h1: -.01562em,
+  h2: -.00833em,
+  h4: .00735em,
+  h6: .0125em,
+  subtitle1: .00937em,
+  subtitle2: .00714em,
+  body1: 0.3125em,
+  body2: .01786em,
+  overline: .16667em,
+  caption: 0.03333em
+);
+
+/// Sets the letter spacing for a specific typography selector
+///
+/// @author ImBrett
+/// @parameter {string} $letter-spacing
+/// The letter spacing style to use
+/// @return {number} The selected spacing in EMs
+/// @throws error
+///
+/// @example scss
+///   $caption-letter-spacing: letterSpacing(caption);
+///
+@function letterSpacing($letter-spacing: 'default') {
+  @if map-has-key($letter-spaces, $letter-spacing) {
+    @return map-get($letter-spaces, $letter-spacing);
+  }
+
+  @error 'Unsupported letter spacing `#{$letter-spacing}`, must be one of: h1 || h2 || h4 || h6 || subtitle1 || subtitle2 || body1 || body2 || overline || caption';
+}

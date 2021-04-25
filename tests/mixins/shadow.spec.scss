@@ -1,0 +1,37 @@
+@import 'true';
+@import '../../src/mixins/shadow';
+
+@include describe('Shadow [mixin]') {
+  @include it('Applies a shadow with no hover effect') {
+    @include assert{
+      @include output{
+        @include shadow()
+      }
+
+      @include expect{
+        box-shadow: 0 space(4) space(4) rgba(0, 0, 0, 0.23),
+                    0 space(2) space(2) rgba(0, 0, 0, 0.36);
+        transition: 0.3s all ease-in-out;
+      }
+    }
+  }
+
+  @include it('Applies a shadow with a hover effect') {
+    @include assert{
+      @include output{
+        @include shadow(true)
+      }
+
+      @include expect{
+        box-shadow: 0 space(4) space(4) rgba(0, 0, 0, 0.23),
+                    0 space(2) space(2) rgba(0, 0, 0, 0.36);
+        transition: 0.3s all ease-in-out;
+
+        &:hover {
+          box-shadow: 0 space(12) space(12) rgba(0, 0, 0, 0.38),
+                      0 space() space() rgba(0, 0, 0, 0.35);
+          }
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+/// Sets a size for a square element
+///
+/// @author ImBrett
+/// @arg {number} $width
+/// The width of the element in px
+/// @arg {number} $height [$width]
+/// The height of the element in px
+///
+/// @example scss
+///   .square-box {
+///      @include size(4)
+///   }
+///
+///   .rectangle-box {
+///      @include size(4, 10)
+///   }
+///
+@mixin size($width, $height: $width) {
+  width: space($width);
+  height: space($height);
+}

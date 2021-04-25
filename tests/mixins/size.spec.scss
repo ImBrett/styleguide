@@ -1,0 +1,30 @@
+@import 'true';
+@import '../../src/mixins/size';
+
+@include describe('Size [mixin]') {
+  @include it('Sets a square size') {
+    @include assert{
+      @include output{
+        @include size(4)
+      }
+
+      @include expect{
+        width: space(4);
+        height: space(4);
+      }
+    }
+  }
+
+  @include it('Sets a custom rectangle size') {
+    @include assert{
+      @include output{
+        @include size(4, 10)
+      }
+
+      @include expect{
+        width: space(4);
+        height: space(10);
+      }
+    }
+  }
+}

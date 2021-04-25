@@ -1,0 +1,22 @@
+@import 'true';
+@import '../../src/tokens/colors';
+
+@include describe('Color [function]') {
+  @include it('Returns the primary color tone values') {
+    $test: color(primary);
+    $expected: hsl(167, 42%, 51%);
+    @include assert_equal($test, $expected);
+  }
+
+  @include it('Returns the primary dark color tone value') {
+    $test: color(primary, dark);
+    $expected: hsl(167, 42%, 41%);
+    @include assert_equal($test, $expected);
+  }
+
+  @include it('Returns the primary light color tone value') {
+    $test: color(primary, light);
+    $expected: hsl(167, 42%, 61%);
+    @include assert_equal($test, $expected);
+  }
+}

@@ -1,0 +1,23 @@
+/// Sets styles based on a certain screen size
+///
+/// @author ImBrett
+/// @content
+/// @arg {string} $breakpoint
+/// The devices breakpoint
+/// @throws error
+/// @example scss
+///   .phone-screen-styles{
+///     @include media(phone){
+///       flex: 1 1 100%;
+///     }
+///   }
+///
+@mixin media($breakpoint) {
+  @if map-has-key($grid-breakpoints, $breakpoint) {
+    @media (min-width: #{map_get($grid-breakpoints, $breakpoint)}) {
+      @content;
+    }
+  } @else {
+    @error "breakpoint not suported `#{$breakpoint}`, must be one of: phone || tabletPortrait || tabletLandscape || smallDesktop || largeDesktop";
+  }
+}

@@ -1,0 +1,64 @@
+@import 'true';
+@import '../../src/tokens/fonts';
+
+@include describe('fontSize [function]') {
+  @include it('Returns the expected default font size value') {
+    $test: fontSize();
+    $expected: space(16);
+    @include assert_equal($test, $expected);
+  }
+
+  @include it('Returns the expected level one heading font size value') {
+    $test: fontSize(h1);
+    $expected: space(96);
+    @include assert_equal($test, $expected);
+  }
+
+  @include it('Returns the expected level two heading font size value') {
+    $test: fontSize(h2);
+    $expected: space(60);
+    @include assert_equal($test, $expected);
+  }
+
+  @include it('Returns the expected level three heading font size value') {
+    $test: fontSize(h3);
+    $expected: space(48);
+    @include assert_equal($test, $expected);
+  }
+
+  @include it('Returns the expected level four heading font size value') {
+    $test: fontSize(h4);
+    $expected: space(34);
+    @include assert_equal($test, $expected);
+  }
+
+  @include it('Returns the expected level five heading font size value') {
+    $test: fontSize(h5);
+    $expected: space(24);
+    @include assert_equal($test, $expected);
+  }
+
+  @include it('Returns the expected level six heading font size value') {
+    $test: fontSize(h6);
+    $expected: space(20);
+    @include assert_equal($test, $expected);
+  }
+
+  @include it('Returns the expected subtitle font size value') {
+    $test: fontSize(subtitle);
+    $expected: space(14);
+    @include assert_equal($test, $expected);
+  }
+
+  @include it('Returns the expected caption font size value') {
+    $test: fontSize(caption);
+    $expected: space(12);
+    @include assert_equal($test, $expected);
+  }
+
+  @include it('Returns the expected overline font size value') {
+    $test: fontSize(overline);
+    $expected: space(10);
+    @include assert_equal($test, $expected);
+  }
+}

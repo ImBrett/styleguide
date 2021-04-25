@@ -1,0 +1,83 @@
+/// Colors and tones for your companies brand
+///
+/// It is highly recommended to create your own scss file and use this map as a
+/// reference for defining your own brands colors.
+///
+/// @type map<map<string>>
+$brand-colors: (
+  primary: (
+    default: hsl(167, 42%, 51%),
+    dark: hsl(167, 42%, 41%),
+    light: hsl(167, 42%, 61%),
+  ),
+  accent: (
+    default: hsl(246, 33%, 27%),
+    dark: hsl(246, 33%, 17%),
+    light: hsl(246, 33%, 37%),
+  ),
+  info: (
+    default: hsl(185, 60%, 56%),
+    dark: hsl(185, 60%, 46%),
+    light: hsl(185, 60%, 66%)
+  ),
+  warn: (
+    default: hsl(18, 100%, 43%),
+    dark: hsl(18, 100%, 33%),
+    light: hsl(18, 100%, 53%)
+  ),
+  success: (
+    default: hsl(167, 42%, 51%),
+    dark: hsl(167, 42%, 41%),
+    light: hsl(167, 42%, 61%)
+  ),
+  danger: (
+    default: hsl(355, 54%, 44%),
+    dark: hsl(355, 54%, 34%),
+    light: hsl(355, 54%, 54%)
+  ),
+  background: (
+    default: hsl(246, 33%, 95%),
+    dark: hsl(246, 33%, 91%),
+    light: hsl(246, 33%, 99%),
+    inverse: hsl(246, 13%, 26%)
+  ),
+  text: (
+    inverse: hsl(60, 100%, 100%),
+    default: hsl(0, 0%, 20%)
+  ),
+  shadow: (
+    default: hsl(276, 100%, 1%)
+  ),
+  divider: (
+    default: hsl(240, 7%, 31%),
+    inverse: hsl(276, 100%, 80%)
+  )
+);
+
+/// Sets a color and tone on a text element or background
+///
+/// @author ImBrett
+/// @arg {string} $color
+/// The brand color to use
+/// @arg {string} $tone [default]
+/// The tone of the color to use
+/// @return {string} HSL value of the selected color and tone
+/// @throws error
+///
+/// @example scss Setting a text color
+///   .primary-dark-color {
+///     color: color(primary, dark);
+///   }
+///
+/// @example scss Setting a background color
+///   .inverse-background-color {
+///     background-color: color(backround, inverse);
+///   }
+///
+@function color($color, $tone: default) {
+  @if map-has-key($brand-colors, $color) {
+    @return map-get(map-get($brand-colors, $color), $tone);
+  }
+
+  @error 'Color is not supported `#{$color}, #{$tone}`, refer to colors.scss for supported colors and tones';
+}

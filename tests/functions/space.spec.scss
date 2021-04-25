@@ -1,0 +1,16 @@
+@import 'true';
+@import '../../src/tokens/spaces';
+
+@include describe('Space [function]') {
+  @include it('Returns the expected default spacing value') {
+    $test: space();
+    $expected: 0.8rem;
+    @include assert_equal($test, $expected);
+  }
+
+  @include it('Returns a custom default spacing value') {
+    $test: space(96);
+    $expected: 9.6rem;
+    @include assert_equal($test, $expected);
+  }
+}

@@ -1,0 +1,22 @@
+/// A mixin to include a shadow on an element
+///
+/// @author ImBrett
+/// @arg {boolean} $hover [false]
+/// Whether or not to include a hover effect
+///
+/// @example scss
+///   $shadow: @include shadow();
+///   $hover-effect-shadow: @include shadow(true);
+///
+@mixin shadow($hover: false) {
+  box-shadow: 0 space(4) space(4) rgba(0, 0, 0, 0.23),
+    0 space(2) space(2) rgba(0, 0, 0, 0.36);
+  transition: 0.3s all ease-in-out;
+
+  @if $hover {
+    &:hover {
+      box-shadow: 0 space(12) space(12) rgba(0, 0, 0, 0.38),
+        0 space() space() rgba(0, 0, 0, 0.35);
+    }
+  }
+}

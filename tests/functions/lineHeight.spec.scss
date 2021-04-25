@@ -1,0 +1,64 @@
+@import 'true';
+@import '../../src/tokens/fonts';
+
+@include describe('lineHeight [function]') {
+  @include it('Returns the expected default line height value') {
+    $test: lineHeight();
+    $expected: space(24);
+    @include assert_equal($test, $expected);
+  }
+
+  @include it('Returns the expected level one heading line height value') {
+    $test: lineHeight(h1);
+    $expected: space(96);
+    @include assert_equal($test, $expected);
+  }
+
+  @include it('Returns the expected level two heading line height value') {
+    $test: lineHeight(h2);
+    $expected: space(60);
+    @include assert_equal($test, $expected);
+  }
+
+  @include it('Returns the expected level three heading line height value') {
+    $test: lineHeight(h3);
+    $expected: space(50);
+    @include assert_equal($test, $expected);
+  }
+
+  @include it('Returns the expected level four heading line height value') {
+    $test: lineHeight(h4);
+    $expected: space(40);
+    @include assert_equal($test, $expected);
+  }
+
+  @include it('Returns the expected level five heading line height value') {
+    $test: lineHeight(h5);
+    $expected: space(32);
+    @include assert_equal($test, $expected);
+  }
+
+  @include it('Returns the expected level six heading line height value') {
+    $test: lineHeight(h6);
+    $expected: space(32);
+    @include assert_equal($test, $expected);
+  }
+
+  @include it('Returns the expected level one subtitle line height value') {
+    $test: lineHeight(subtitle1);
+    $expected: space(28);
+    @include assert_equal($test, $expected);
+  }
+
+  @include it('Returns the expected level two subtitle line height value') {
+    $test: lineHeight(subtitle2);
+    $expected: space(22);
+    @include assert_equal($test, $expected);
+  }
+
+  @include it('Returns the expected second level body line height value') {
+    $test: lineHeight(body2);
+    $expected: space(20);
+    @include assert_equal($test, $expected);
+  }
+}

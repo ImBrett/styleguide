@@ -1,0 +1,70 @@
+@import 'true';
+@import '../../src/tokens/fonts';
+
+@include describe('letterSpacing [function]') {
+  @include it('Returns the expected default letter spacing value') {
+    $test: letterSpacing();
+    $expected: normal;
+    @include assert_equal($test, $expected);
+  }
+
+  @include it('Returns the expected level one heading letter spacing value') {
+    $test: letterSpacing(h1);
+    $expected: -.01562em;
+    @include assert_equal($test, $expected);
+  }
+
+  @include it('Returns the expected level two heading letter spacing value') {
+    $test: letterSpacing(h2);
+    $expected: -.00833em;
+    @include assert_equal($test, $expected);
+  }
+
+  @include it('Returns the expected level four heading letter spacing value') {
+    $test: letterSpacing(h4);
+    $expected: .00735em;
+    @include assert_equal($test, $expected);
+  }
+
+  @include it('Returns the expected level six heading letter spacing value') {
+    $test: letterSpacing(h6);
+    $expected: .0125em;
+    @include assert_equal($test, $expected);
+  }
+
+  @include it('Returns the expected level one subtitle letter spacing value') {
+    $test: letterSpacing(subtitle1);
+    $expected: .00937em;
+    @include assert_equal($test, $expected);
+  }
+
+  @include it('Returns the expected level two subtitle letter spacing value') {
+    $test: letterSpacing(subtitle2);
+    $expected: .00714em;
+    @include assert_equal($test, $expected);
+  }
+
+  @include it('Returns the expected first level body letter spacing value') {
+    $test: letterSpacing(body1);
+    $expected: 0.3125em;
+    @include assert_equal($test, $expected);
+  }
+
+  @include it('Returns the expected second level body letter spacing value') {
+    $test: letterSpacing(body2);
+    $expected: .01786em;
+    @include assert_equal($test, $expected);
+  }
+
+  @include it('Returns the expected overline letter spacing value') {
+    $test: letterSpacing(overline);
+    $expected: .16667em;
+    @include assert_equal($test, $expected);
+  }
+
+  @include it('Returns the expected caption letter spacing value') {
+    $test: letterSpacing(caption);
+    $expected: 0.03333em;
+    @include assert_equal($test, $expected);
+  }
+}

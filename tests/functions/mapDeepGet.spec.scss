@@ -1,0 +1,16 @@
+@import 'true';
+@import '../../src/utils/map_deep_get';
+
+@include describe('Map Deep Get [function]') {
+  @include it('Returns the value from a nested map') {
+    $map: (
+      'key': (
+        'nested_key': 10px
+      )
+    );
+
+    $test: map_deep_get($map, 'key', 'nested_key');
+    $expected: 10px;
+    @include assert_equal($test, $expected);
+  }
+}

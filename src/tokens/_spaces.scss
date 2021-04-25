@@ -1,0 +1,47 @@
+/// A map of common spacing units to be used to set sizes across your application
+///
+/// This map should include all measurements used in your application, this also
+/// helps to keep track of how sane your applications spacing is (less is more
+/// consistent and generally better)
+///
+$space-units: (
+  default: 0.8rem,
+  2: 0.2rem,
+  4: 0.4rem,
+  10: 1rem,
+  12: 1.2rem,
+  14: 1.4rem,
+  16: 1.6rem,
+  20: 2rem,
+  22: 2.2rem,
+  24: 2.4rem,
+  28: 2.8rem,
+  32: 3.2rem,
+  34: 3.4rem,
+  40: 4rem,
+  50: 5rem,
+  60: 6.0rem,
+  96: 9.6rem
+);
+
+/// Set a specific size on any one element
+///
+/// This function should replace any occurences of hard-coded REM values to enforce
+/// constistancy across your applications UI
+///
+/// @author ImBrett
+/// @parameter {number} $space-unit [8]
+/// The space unit to use in px
+/// @return {number} The space unit in px converted to REMs
+/// @throws error
+///
+/// @example scss
+///   $24-pixels-in-rem: space(24);
+///
+@function space($space-unit: default) {
+  @if map-has-key($space-units, $space-unit) {
+    @return map-get($space-units, $space-unit);
+  }
+
+  @error 'Space unit not supported `#{$space-unit}';
+}

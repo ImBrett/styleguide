@@ -1,0 +1,17 @@
+body,
+html {
+  width: 100%;
+  color: color('text');
+  background-color: color('background');
+  overflow-x: hidden;
+
+  i {
+    margin-top: space(2);
+  }
+}
+
+pre {
+  background: color('background', 'inverse');
+  padding: space();
+  color: color('background', 'light');
+}

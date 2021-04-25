@@ -1,0 +1,40 @@
+@import 'true';
+@import '../../src/tokens/fonts';
+
+@include describe('fontWeight [function]') {
+  @include it('Returns the expected default font weight value') {
+    $test: fontWeight();
+    $expected: 400;
+    @include assert_equal($test, $expected);
+  }
+
+  @include it('Returns the expected thin font weight value') {
+    $test: fontWeight(thin);
+    $expected: 100;
+    @include assert_equal($test, $expected);
+  }
+
+  @include it('Returns the expected light font weight value') {
+    $test: fontWeight(light);
+    $expected: 300;
+    @include assert_equal($test, $expected);
+  }
+
+  @include it('Returns the expected medium font weight value') {
+    $test: fontWeight(medium);
+    $expected: 500;
+    @include assert_equal($test, $expected);
+  }
+
+  @include it('Returns the expected bold font weight value') {
+    $test: fontWeight(bold);
+    $expected: 700;
+    @include assert_equal($test, $expected);
+  }
+
+  @include it('Returns the expected bolder font weight value') {
+    $test: fontWeight(bolder);
+    $expected: 900;
+    @include assert_equal($test, $expected);
+  }
+}

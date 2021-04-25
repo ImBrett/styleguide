@@ -1,0 +1,19 @@
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu:latest
+    services:
+      node:
+        image: node:latest-alpine
+    steps:
+      - name: Clone Project
+        uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+      - name: Check for cached node modules
+        uses: actions/cache@v1
+        with:
+          path: node_modules
+          key: yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: yarn
+      - run: yarn install --frozen-lockfile
+      - run: yarn test
