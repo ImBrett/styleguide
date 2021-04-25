@@ -9,7 +9,7 @@
 /// @return {number} The calculated exponent
 ///
 /// @example scss Calculating the second exponent of the number 2
-/// $four: pow(2, 2);
+///   $four: pow(2, 2);
 ///
 @function pow($number, $exp){
   $value: 1;
@@ -45,4 +45,21 @@
   }
 
   @return $value;
+}
+
+/// Rounds a number to a specific number of decimals
+///
+/// @author ImBrett
+/// @group utility
+/// @arg {number} $number [null]
+/// The number to round
+/// @arg {number} $power [null]
+/// The number of decimal points to round to
+/// @return {number} The rounded number
+///
+/// @example scss Rounding a number to the second decimal place
+///   $rounded-number: toFixed(3.14159, 100) => 3.14
+///
+@function toFixed($number, $power){
+  @return round($number * $power) / $power;
 }
