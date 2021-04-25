@@ -29,7 +29,8 @@ $space-units: (
 /// Set a specific size on any one element
 ///
 /// This function should replace any occurences of hard-coded REM values to enforce
-/// constistancy across your applications UI
+/// constistancy across your applications UI. The font-size has been set to 62.5%
+/// in the global styles to allow 1REM = 10px.
 ///
 /// @author ImBrett
 /// @parameter {number} $space-unit [8]
@@ -37,7 +38,7 @@ $space-units: (
 /// @return {number} The space unit in px converted to REMs
 /// @throws error
 ///
-/// @example scss
+/// @example scss Converting 24 pixels to REM
 ///   $24-pixels-in-rem: space(24);
 ///
 @function space($space-unit: default) {

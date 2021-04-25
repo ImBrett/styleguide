@@ -34,7 +34,7 @@ $font-sizes: (
 /// @return {number} The size of the font in REMs
 /// @throws error
 ///
-/// @example scss
+/// @example scss Setting a text element to the third-level heading size
 ///   $third-level-heading-font-size: fontSize(h3);
 ///
 @function fontSize($font-size: default) {
@@ -74,7 +74,7 @@ $line-heights: (
 /// @return {integer} The selected line height in REMs
 /// @throws error
 ///
-/// @example scss
+/// @example scss Setting the default line height on a text element
 ///   $default-line-height: lineHeight();
 ///
 @function lineHeight($height: default) {
@@ -105,7 +105,7 @@ $font-weights: (
 /// @return {number} The selected font weight
 /// @throws error
 ///
-/// @example scss
+/// @example scss Giving a text element a slight bold effect
 ///    $medium-font-weight: fontWeight(medium);
 ///
 @function fontWeight($weight: default) {
@@ -142,7 +142,8 @@ $letter-spaces: (
 /// @return {number} The selected spacing in EMs
 /// @throws error
 ///
-/// @example scss
+/// @example scss Setting a text elements letter-spacing to be consistent with
+/// captions
 ///   $caption-letter-spacing: letterSpacing(caption);
 ///
 @function letterSpacing($letter-spacing: default) {
