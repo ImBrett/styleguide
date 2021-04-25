@@ -26,3 +26,23 @@
 
   @return $value;
 }
+
+/// Calculates the factorial of a given number
+///
+/// @author ImBrett
+/// @group utility
+/// @arg {number} $number [null]
+/// The number to calculate a factorial for
+/// @return {number} The calculated factorial
+///
+@function factorial($number){
+  $value: 1;
+
+  @if $number > 0{
+    @for $i from 1 through $number{
+      $value: $value * $i;
+    }
+  }
+
+  @return $value;
+}
