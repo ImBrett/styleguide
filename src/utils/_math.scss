@@ -1,0 +1,28 @@
+/// Calculates the exponent `$exp` of a number `$number`
+///
+/// @author ImBrett
+/// @group utilitiy
+/// @arg {number} $number [null]
+/// The base number
+/// @arg {number} $exp [null]
+/// The exponent to calculate
+/// @return {number} The calculated exponent
+///
+/// @example scss Calculating the second exponent of the number 2
+/// $four: pow(2, 2);
+///
+@function pow($number, $exp){
+  $value: 1;
+
+  @if ($exp > 0){
+      @for $i from 1 through $exp{
+        $value: $value * $number;
+      }
+  } @else {
+    @for $i from 1 through -$exp{
+      $value: $value / $number;
+    }
+  }
+
+  @return $value;
+}
