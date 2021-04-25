@@ -1,16 +1,17 @@
 /// Sets a size for a square element
 ///
 /// @author ImBrett
-/// @arg {number} $width
+/// @arg {number} $width [null]
 /// The width of the element in px
 /// @arg {number} $height [$width]
 /// The height of the element in px
 ///
-/// @example scss
+/// @example scss Creating a 4px by 4px box converted to REMs
 ///   .square-box {
 ///      @include size(4)
 ///   }
 ///
+/// @example scss Creating a 4px by 10px rectangle converted to REMs
 ///   .rectangle-box {
 ///      @include size(4, 10)
 ///   }

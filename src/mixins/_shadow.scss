@@ -1,11 +1,16 @@
 /// A mixin to include a shadow on an element
 ///
+/// Setting the hover effect to `true` will create an effect that spreads the
+/// shadow out from the element after your mouse has hovered over it
+///
 /// @author ImBrett
 /// @arg {boolean} $hover [false]
 /// Whether or not to include a hover effect
 ///
-/// @example scss
+/// @example scss Including a shadow with no hover effect
 ///   $shadow: @include shadow();
+///
+/// @example scss Including a shadow with the hover effect
 ///   $hover-effect-shadow: @include shadow(true);
 ///
 @mixin shadow($hover: false) {

@@ -2,13 +2,43 @@
 ///
 /// @author ImBrett
 /// @content
-/// @arg {string} $breakpoint
+/// @arg {string} $breakpoint [null]
 /// The devices breakpoint
 /// @throws error
-/// @example scss
+///
+/// @example scss Setting styles for a phone screen
 ///   .phone-screen-styles{
 ///     @include media(phone){
-///       flex: 1 1 100%;
+///       ...
+///     }
+///   }
+///
+/// @example scss Setting styles for a tablet in portrait mode
+///   .tablet-portrait-screen-styles{
+///     @include media(tabletPortrait){
+///       ...
+///     }
+///   }
+///
+/// @example scss Setting styles for a tablet in landscape mode
+///   .tablet-landscape-screen-styles{
+///     @include media(tabletLandscape){
+///       ...
+///     }
+///   }
+///
+/// @example scss Setting styles for a small desktop/laptop screen
+///   .small-desktop-screen-styles{
+///     @include media(smallDesktop){
+///       ...
+///     }
+///   }
+///
+
+/// @example scss Setting styles for a large desktop/TV screen
+///   .large-desktop-screen-styles{
+///     @include media(largeDesktop){
+///       ...
 ///     }
 ///   }
 ///

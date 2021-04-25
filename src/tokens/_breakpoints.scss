@@ -59,7 +59,7 @@ $screen-small-desktop-gutter: space();
 $screen-large-desktop-gutter: space();
 
 /// A map of breakpoints for each screen
-/// @type map<number>
+/// @type map
 $grid-breakpoints: (
   default: 0px,
   phone: $screen-phone,

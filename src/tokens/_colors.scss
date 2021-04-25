@@ -3,7 +3,8 @@
 /// It is highly recommended to create your own scss file and use this map as a
 /// reference for defining your own brands colors.
 ///
-/// @type map<map<string>>
+/// @type map
+///
 $brand-colors: (
   primary: (
     default: hsl(167, 42%, 51%),
@@ -57,7 +58,7 @@ $brand-colors: (
 /// Sets a color and tone on a text element or background
 ///
 /// @author ImBrett
-/// @arg {string} $color
+/// @arg {string} $color [null]
 /// The brand color to use
 /// @arg {string} $tone [default]
 /// The tone of the color to use
