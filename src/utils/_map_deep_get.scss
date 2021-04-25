@@ -2,11 +2,11 @@
 ///
 /// @author ImBrett
 /// @group utility
-/// @arg {map<map<T>>} $map [null]
+/// @arg {map} $map [null]
 /// The provided map
-/// @arg {array<string>} $keys [null]
+/// @arg {string} $keys [null]
 /// The keys to search for
-/// @return {map<T>}
+/// @return {map}
 ///
 /// @example scss
 ///   $map: (
