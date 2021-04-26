@@ -1,0 +1,10 @@
+@import 'true';
+@import '../../src/utils/math';
+
+@include describe('Radian [function]') {
+  @include it('Returns the expected value') {
+    $test: radian(45deg);
+    $expected: 0.7853981634;
+    @include assert_equal($test, $expected);
+  }
+}
