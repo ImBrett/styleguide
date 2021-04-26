@@ -1,0 +1,10 @@
+@import 'true';
+@import '../../src/utils/math';
+
+@include describe('Square Root [function]') {
+  @include it('Returns the expected value') {
+    $test: sqrt(144);
+    $expected: 12;
+    @include assert_equal($test, $expected);
+  }
+}

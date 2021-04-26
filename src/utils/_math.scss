@@ -83,5 +83,26 @@ $PI: 3.1415926535897932384626433832795028841971693993751;
     $unitless: $unitless / 180 * $PI;
     @return $unitless;
   }
-  @error '#{$angle} must have a degree unit, consider adding `deg` to the end of the number.'
+  @error '#{$angle} must have a degree unit, consider adding `deg` to the end of the number.';
+}
+
+/// Calculates the square root of a number
+///
+/// @author ImBrett
+/// @arg {number} $number [null]
+/// The number to find the square root of
+/// @arg {number} $precision [12]
+/// The number of decimal points to calculate to
+/// @return {number} The square root of `$number`
+///
+/// @example scss Calculating the square root of 144
+///   $value: sqrt(144); => 12
+///
+@function sqrt($number, $precision: 12){
+  $guess: random(20);
+  $value: $guess;
+  @for $i from 1 through $precision {
+    $value: ($value - (pow($value, 2) - $number) / (2 * $value));
+  }
+  @return $value;
 }
