@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "test": "jest",
-    "docs": "sassdoc src/"
+    "docs": "sassdoc src/ --theme vulcan"
   },
   "devDependencies": {
     "glob": "^7.1.6",
