@@ -1,5 +1,5 @@
 @import 'true';
-@import '../../src/utils/math';
+@import '../../../src/utils/math/mod';
 
 @include describe('Radian [function]') {
   @include it('Returns the expected value') {
