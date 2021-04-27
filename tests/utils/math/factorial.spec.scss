@@ -1,0 +1,10 @@
+@import 'true';
+@import '../../../src/utils/math/mod';
+
+@include describe('Factorial [function]') {
+  @include it('Returns the expected value') {
+    $test: factorial(5);
+    $expected: 120;
+    @include assert_equal($test, $expected);
+  }
+}

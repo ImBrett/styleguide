@@ -1,0 +1,10 @@
+@import 'true';
+@import '../../../src/utils/math/mod';
+
+@include describe('Pow [function]') {
+  @include it('Returns the expected value') {
+    $test: pow(2, 2);
+    $expected: 4;
+    @include assert_equal($test, $expected);
+  }
+}

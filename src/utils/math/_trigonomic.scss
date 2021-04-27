@@ -1,0 +1,131 @@
+/// A polynomial approximation to approximate a function, find the antiderivative
+/// of a complicated function, or compute an otherwise uncomputable sum. Useful
+/// to approximate sin and cos functions iteratively.
+///
+/// @author ImBrett
+/// @group math
+/// @link https://mathworld.wolfram.com/MaclaurinSeries.html
+/// @arg {number} $start [null]
+/// The point on the y-axis to start from
+/// @arg {number} $key [null]
+/// The current step along the function, further is less accurate
+/// @arg {number} $number [null]
+/// The angle to determine the sin/cos of
+/// @return {number} The sin/cos of `$angle`
+///
+/// @example scss Determining the sin of 45 degrees with a maclauren series
+/// $value: maclauren(45, 3, 45); => 0.7071067812
+///
+/// @example scss Determining the cos of 45 degrees with a maclauren series
+/// $value: maclauren(1, 2, 45); => 0.7071067812
+///
+@function maclaurin($start, $key, $number) {
+  $value: $start;
+  $add: 0;
+  $iter: 50;
+  @for $i from 1 through $iter {
+    @if $add == 0 {
+      $value: $value - (pow($number, $key)/factorial($key));
+      $add: 1;
+    }
+    @else {
+      $value: $value + (pow($number, $key)/factorial($key));
+      $add: 0;
+    }
+    $key: $key+2;
+  }
+  @return $value;
+}
+
+/// Determines the arc sine in radians of a given angle `$angle`
+///
+/// @author ImBrett
+/// @group math
+/// @arg {number} $angle [null]
+/// The angle to determine the arc sine of
+/// @return {number} The arc sine of `$angle`
+///
+/// @example scss Determining the arc sine of 45 degrees
+/// $value: sin(45deg); => 0.7071067812
+///
+@function sin($angle) {
+    $angle: radian($angle);
+    @return maclaurin($angle, 3, $angle);
+}
+
+/// Determines the arc cosine in radians of a given angle `$angle`
+///
+/// @author ImBrett
+/// @group math
+/// @arg {number} $angle [null]
+/// The angle to determine the arc cosine of
+/// @return {number} The arc cosine of `$angle`
+///
+/// @example scss Determining the arc cosine of 45 degress
+/// $value: cos(45deg); => 0.7071067812
+///
+@function cos($angle) {
+  $angle: radian($angle);
+  @return maclaurin(1, 2, $angle);
+}
+
+/// Determines the secant (reciprocal arc cosine) of a given angle `$angle`
+///
+/// @author ImBrett
+/// @group math
+/// @arg {number} $angle [null]
+/// The angle to determine the secant of
+/// @return {number} The secant of `$angle`
+///
+/// @example scss Determining the secant of 45 degrees
+/// $value: sec(45deg); => 1.4142135623
+///
+@function sec($angle) {
+  @return 1 / cos($angle);
+}
+
+/// Determines the cosecant (reciprocal arc sine) of a given angle `$angle`
+///
+/// @author ImBrett
+/// @group math
+/// @arg {number} $angle [null]
+/// The angle to determine the cosecant of
+/// @return {number} The cosecant of `$angle`
+///
+/// @example scss Determining the cosecant of 45 degrees
+/// $value: csc(45deg); => 1.4142135623
+///
+@function csc($angle) {
+  @return 1 / sin($angle);
+}
+
+
+/// Determines the arc tangent in radians of a given angle `$angle`
+///
+/// @author ImBrett
+/// @group math
+/// @arg {number} $angle [null]
+/// The angle to determine the arc tangent of
+/// @return {number} The arc tangent of `$angle`
+///
+/// @example scss Determining the arc tangent of 45 degrees
+/// $value: tan(45deg); => 1
+///
+@function tan($angle) {
+  @return sin($angle) / cos($angle);
+}
+
+/// Determines the cotangent (reciprocal arc tangent) of a given angle `$angle`
+///
+/// @author ImBrett
+/// @group math
+/// @arg {number} $angle [null]
+/// The angle to determine the cotangent of
+/// @return {number} The contangent of `$angle`
+///
+/// @example scss Determining the cotangent of 45 degrees
+/// $value: cot(45deg); => 1
+///
+@function cot($angle) {
+  @return 1 / tan($angle);
+}
