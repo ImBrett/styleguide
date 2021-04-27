@@ -1,5 +1,6 @@
-@import 'trig';
+@import 'trigonomic';
 @import 'hyperbolic';
+@import 'logarithmic';
 
 /// The value of PI
 /// @type number
@@ -20,14 +21,21 @@ $E: 2.71828182845904523536028747135266249775724709369995;
 /// @group math
 /// @link https://en.wikipedia.org/wiki/Mathematical_constant#Pythagoras'_constant_%E2%88%9A2
 ///
-$PC: sqrt(2);
+$PC: 1.4142135624;
 
 /// Theodorus' constant
 /// @type number
 /// @group math
 /// @link https://en.wikipedia.org/wiki/Square_root_of_3
 ///
-$TC: sqrt(3);
+$TC: 1.7320508076;
+
+/// The natural log of the number 2
+/// @type number
+/// @group math
+/// @link https://en.wikipedia.org/wiki/Natural_logarithm_of_2
+///
+$LN2: 0.6931471806;
 
 /// Rounds a number to a specific number of decimals
 ///
