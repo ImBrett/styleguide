@@ -46,6 +46,24 @@ $TC: sqrt(3);
   @return round($number * $power) / $power;
 }
 
+/// Multiplies a number by the golden ratio
+///
+/// @author ImBrett
+/// @group math
+/// @arg {number} $number [1]
+/// The base number to multiply the golden ratio by
+/// @return {number} The value of the golden ratio times the base number
+///
+/// @example scss Returning the original golden ratio value
+/// $value: goldenRatio(); => 1.6180339887
+///
+/// @example scss Multiplying the value of the golden ratio by 5
+/// $value: goldenRatio(5); => 8.0901699437
+///
+@function goldenRatio($number: 1){
+  @return (1/2 + sqrt(5) / 2) * $number;
+}
+
 /// Calculates the exponent `$exp` of a number `$number`
 ///
 /// @author ImBrett
