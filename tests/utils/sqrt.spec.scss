@@ -7,4 +7,16 @@
     $expected: 12;
     @include assert_equal($test, $expected);
   }
+
+  @include it('Accurately calculates Pythagoras constant') {
+    $test: toFixed(sqrt(2), pow(10, 10));
+    $expected: 1.4142135624;
+    @include assert_equal($test, $expected);
+  }
+
+  @include it('Accurately calculates Theodorus constant') {
+    $test: toFixed(sqrt(3), pow(10, 10));
+    $expected: 1.7320508076;
+    @include assert_equal($test, $expected);
+  }
 }

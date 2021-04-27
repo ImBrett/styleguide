@@ -1,0 +1,40 @@
+@import 'true';
+@import '../../src/utils/math';
+
+@include describe('Hyperbolic Geometry') {
+  @include it('Returns the expected hyperbolic sine value') {
+    $test: toFixed(sinh(1), pow(10, 10));
+    $expected: 1.1752011936;
+    @include assert_equal($test, $expected);
+  }
+
+  @include it('Returns the expected hyperbolic cosine value') {
+    $test: toFixed(cosh(1), pow(10, 10));
+    $expected: 1.5430806348;
+    @include assert_equal($test, $expected);
+  }
+
+  @include it('Returns the expected hyperbolic secant value') {
+    $test: toFixed(sech(1), pow(10, 10));
+    $expected: 0.6480542737;
+    @include assert_equal($test, $expected);
+  }
+
+  @include it('Returns the expected hyperbolic cosecant value') {
+    $test: toFixed(csch(1), pow(10, 10));
+    $expected: 0.8509181282;
+    @include assert_equal($test, $expected);
+  }
+
+  @include it('Returns the expected hyperbolic tangent value') {
+    $test: toFixed(tanh(1), pow(10, 10));
+    $expected: 0.761594156;
+    @include assert_equal($test, $expected);
+  }
+
+  @include it('Returns the expected hyperbolic cotangent value') {
+    $test: toFixed(coth(1), pow(10, 10));
+    $expected: 1.3130352855;
+    @include assert_equal($test, $expected);
+  }
+}
