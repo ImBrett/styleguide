@@ -1,21 +1,31 @@
 /// Screen size breakpoint for media on mobile phones
 /// @type number
+/// @group Core
+///
 $screen-phone: 320px;
 
 /// Screen size breakpoint for tablets that are in portrait mode
 /// @type number
+/// @group Core
+///
 $screen-tablet-portrait: 768px;
 
 /// Screen size breakpoint of a tablets that are in landscape mode
 /// @type number
+/// @group Core
+///
 $screen-tablet-landscape: 1024px;
 
 /// Screen size breakpoint of a small desktop monitor
 /// @type number
+/// @group Core
+///
 $screen-small-desktop: 1200px;
 
 /// Screen size breakpoint of a large desktop monitor
 /// @type number
+/// @group Core
+///
 $screen-large-desktop: 1440px;
 
 /// Prevents elements from overflowing on phone screens
@@ -24,42 +34,62 @@ $screen-phone-max: $screen-phone - 1;
 
 /// Prevents elements from overflowing on tablets in portrait mode
 /// @type number
+/// @group Core
+///
 $screen-tablet-portrait-max: $screen-tablet-portrait - 1;
 
 /// Prevents elements from overflowing on tablets in landscape mode
 /// @type number
+/// @group Core
+///
 $screen-tablet-landscape-max: $screen-tablet-landscape - 1;
 
 /// Prevents elements from overflowing on small desktop screens
 /// @type number
+/// @group Core
+///
 $screen-small-desktop-max: $screen-small-desktop - 1;
 
 /// Prevents elements from overflowing on large desktop screens
 /// @type number
+/// @group Core
+///
 $screen-large-desktop-max: $screen-large-desktop - 1;
 
 /// Gutter size for phone screens
 /// @type number
+/// @group Core
+///
 $screen-phone-gutter: space(16);
 
 /// Gutter size for tablets in portrait mode
 /// @type number
+/// @group Core
+///
 $screen-tablet-portrait-gutter: space();
 
 /// Gutter size for tablets in landscape mode
 /// @type number
+/// @group Core
+///
 $screen-tablet-landscape-gutter: space();
 
 /// Gutter size for small desktop monitors
 /// @type number
+/// @group Core
+///
 $screen-small-desktop-gutter: space();
 
 /// Gutter size for large desktop monitors
 /// @type number
+/// @group Core
+///
 $screen-large-desktop-gutter: space();
 
 /// A map of breakpoints for each screen
 /// @type map
+/// @group Core
+///
 $grid-breakpoints: (
   default: 0px,
   phone: $screen-phone,

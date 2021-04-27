@@ -1,17 +1,30 @@
 /// Font family for application headings
+/// @type font
+/// @group Core
+///
 $font-family-headings: 'Montserrat', Helvetica, sans-serif;
+
 /// Font family for application content
+/// @type font
+/// @group Core
+///
 $font-family: 'Ubuntu', Helvetica, sans-serif;
 
 /// Factors a bigger font size for tablet screens
 /// @type number
+/// @group Core
+///
 $font-size-factor-tablet-landscape: 1.125;
+
 /// Factors a bigger font size for desktop screens
 /// @type number
+/// @group Core
+///
 $font-size-factor-large-desktop: 1.25;
 
 /// A map of accepted font sizes to enforce consistency
 /// @type map
+/// @group Core
 ///
 $font-sizes: (
   default: space(16),
@@ -29,13 +42,14 @@ $font-sizes: (
 /// Sets a font size for a specific typography selector
 ///
 /// @author ImBrett
+/// @group Core
 /// @parameter {string} $font-size [default]
 /// The level of font size to use
 /// @return {number} The size of the font in REMs
 /// @throws error
 ///
 /// @example scss Setting a text element to the third-level heading size
-///   $third-level-heading-font-size: fontSize(h3);
+/// $third-level-heading-font-size: fontSize(h3);
 ///
 @function fontSize($font-size: default) {
   @if map-has-key($font-sizes, $font-size) {
@@ -52,6 +66,7 @@ $font-sizes: (
 /// used values
 ///
 /// @type map
+/// @group Core
 ///
 $line-heights: (
   default: space(24),
@@ -69,13 +84,14 @@ $line-heights: (
 /// Sets the line height for a specific typography selector
 ///
 /// @author ImBrett
+/// @group Core
 /// @parameter {string} $height [default]
 /// The height of the selected type
 /// @return {integer} The selected line height in REMs
 /// @throws error
 ///
 /// @example scss Setting the default line height on a text element
-///   $default-line-height: lineHeight();
+/// $default-line-height: lineHeight();
 ///
 @function lineHeight($height: default) {
   @if map-has-key($line-heights, $height) {
@@ -87,6 +103,7 @@ $line-heights: (
 
 /// A map of generally accepted font weights
 /// @type map
+/// @group Core
 ///
 $font-weights: (
   default: 400,
@@ -100,13 +117,14 @@ $font-weights: (
 /// Sets a font weight for a specific typography selector
 ///
 /// @author ImBrett
+/// @group Core
 /// @parameter {string} $weight [default]
 /// The weight to use
 /// @return {number} The selected font weight
 /// @throws error
 ///
 /// @example scss Giving a text element a slight bold effect
-///    $medium-font-weight: fontWeight(medium);
+/// $medium-font-weight: fontWeight(medium);
 ///
 @function fontWeight($weight: default) {
   @if map-has-key($font-weights, $weight) {
@@ -118,6 +136,7 @@ $font-weights: (
 
 /// A map of generally accepted letter spacings
 /// @type map
+/// @group Core
 /// @link https://material.io/design/typography/the-type-system.html#type-scale
 ///
 $letter-spaces: (
@@ -137,14 +156,14 @@ $letter-spaces: (
 /// Sets the letter spacing for a specific typography selector
 ///
 /// @author ImBrett
+/// @group Core
 /// @parameter {string} $letter-spacing [default]
 /// The letter spacing style to use
 /// @return {number} The selected spacing in EMs
 /// @throws error
 ///
-/// @example scss Setting a text elements letter-spacing to be consistent with
-/// captions
-///   $caption-letter-spacing: letterSpacing(caption);
+/// @example scss Setting a text elements letter-spacing to be consistent with captions
+/// $caption-letter-spacing: letterSpacing(caption);
 ///
 @function letterSpacing($letter-spacing: default) {
   @if map-has-key($letter-spaces, $letter-spacing) {

@@ -3,7 +3,7 @@
 /// to approximate sin and cos functions iteratively.
 ///
 /// @author ImBrett
-/// @group math
+/// @group Math
 /// @link https://mathworld.wolfram.com/MaclaurinSeries.html
 /// @arg {number} $start [null]
 /// The point on the y-axis to start from
@@ -40,7 +40,7 @@
 /// Determines the arc sine in radians of a given angle `$angle`
 ///
 /// @author ImBrett
-/// @group math
+/// @group Math
 /// @arg {number} $angle [null]
 /// The angle to determine the arc sine of
 /// @return {number} The arc sine of `$angle`
@@ -56,7 +56,7 @@
 /// Determines the arc cosine in radians of a given angle `$angle`
 ///
 /// @author ImBrett
-/// @group math
+/// @group Math
 /// @arg {number} $angle [null]
 /// The angle to determine the arc cosine of
 /// @return {number} The arc cosine of `$angle`
@@ -72,7 +72,7 @@
 /// Determines the secant (reciprocal arc cosine) of a given angle `$angle`
 ///
 /// @author ImBrett
-/// @group math
+/// @group Math
 /// @arg {number} $angle [null]
 /// The angle to determine the secant of
 /// @return {number} The secant of `$angle`
@@ -87,7 +87,7 @@
 /// Determines the cosecant (reciprocal arc sine) of a given angle `$angle`
 ///
 /// @author ImBrett
-/// @group math
+/// @group Math
 /// @arg {number} $angle [null]
 /// The angle to determine the cosecant of
 /// @return {number} The cosecant of `$angle`
@@ -103,7 +103,7 @@
 /// Determines the arc tangent in radians of a given angle `$angle`
 ///
 /// @author ImBrett
-/// @group math
+/// @group Math
 /// @arg {number} $angle [null]
 /// The angle to determine the arc tangent of
 /// @return {number} The arc tangent of `$angle`
@@ -118,7 +118,7 @@
 /// Determines the cotangent (reciprocal arc tangent) of a given angle `$angle`
 ///
 /// @author ImBrett
-/// @group math
+/// @group Math
 /// @arg {number} $angle [null]
 /// The angle to determine the cotangent of
 /// @return {number} The contangent of `$angle`

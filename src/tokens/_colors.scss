@@ -4,6 +4,7 @@
 /// reference for defining your own brands colors.
 ///
 /// @type map
+/// @group Core
 ///
 $brand-colors: (
   primary: (
@@ -58,6 +59,7 @@ $brand-colors: (
 /// Sets a color and tone on a text element or background
 ///
 /// @author ImBrett
+/// @group Core
 /// @arg {string} $color [null]
 /// The brand color to use
 /// @arg {string} $tone [default]
@@ -71,9 +73,9 @@ $brand-colors: (
 ///   }
 ///
 /// @example scss Setting a background color
-///   .inverse-background-color {
-///     background-color: color(backround, inverse);
-///   }
+/// .inverse-background-color {
+///   background-color: color(backround, inverse);
+/// }
 ///
 @function color($color, $tone: default) {
   @if map-has-key($brand-colors, $color) {
