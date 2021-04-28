@@ -55,7 +55,7 @@ to ensure you aren't duplicating anyone's work. Then, do the following:
 
 ## Code Style
 
-This package follows the ESLint airbnb config for coding style, your code will be linted before you are able to commit and the commit will fail if you do not pass.
+This package follows the stylelint airbnb config for coding style, your code will be linted before you are able to PR and the PR will fail if you do not pass.
 
 [1]: mailto:brett_iverson@tuta.io
 [2]: https://github.com/ImBrett/styleguide/issues/new

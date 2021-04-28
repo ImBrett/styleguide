@@ -1,16 +1,23 @@
-@import 'general/reset';
+@import "general/reset";
 
-@import 'utils/map_deep_get';
-@import 'utils/math/mod';
+@import "utils/map_deep_get";
 
-@import 'tokens/spaces';
-@import 'tokens/colors';
-@import 'tokens/fonts';
-@import 'tokens/breakpoints';
+@import "utils/math/mod";
 
-@import 'mixins/media';
-@import 'mixins/shadow';
-@import 'mixins/size';
+@import "tokens/spaces";
 
-@import 'general/global';
-@import 'general/typography';
+@import "tokens/colors";
+
+@import "tokens/fonts";
+
+@import "tokens/breakpoints";
+
+@import "mixins/media";
+
+@import "mixins/shadow";
+
+@import "mixins/size";
+
+@import "general/global";
+
+@import "general/typography";
