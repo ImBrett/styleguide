@@ -14,10 +14,10 @@
 /// @return {number} The sin/cos of `$angle`
 ///
 /// @example scss Determining the sin of 45 degrees with a maclauren series
-/// $value: maclauren(45, 3, 45); => 0.7071067812
+/// $value: maclauren(45, 3, 45); // 0.7071067812
 ///
 /// @example scss Determining the cos of 45 degrees with a maclauren series
-/// $value: maclauren(1, 2, 45); => 0.7071067812
+/// $value: maclauren(1, 2, 45); // 0.7071067812
 ///
 @function maclaurin($start, $key, $number) {
   $value: $start;
@@ -46,7 +46,7 @@
 /// @return {number} The arc sine of `$angle`
 ///
 /// @example scss Determining the arc sine of 45 degrees
-/// $value: sin(45deg); => 0.7071067812
+/// $value: sin(45deg); // 0.7071067812
 ///
 @function sin($angle) {
     $angle: radian($angle);
@@ -62,7 +62,7 @@
 /// @return {number} The arc cosine of `$angle`
 ///
 /// @example scss Determining the arc cosine of 45 degress
-/// $value: cos(45deg); => 0.7071067812
+/// $value: cos(45deg); // 0.7071067812
 ///
 @function cos($angle) {
   $angle: radian($angle);
@@ -78,7 +78,7 @@
 /// @return {number} The secant of `$angle`
 ///
 /// @example scss Determining the secant of 45 degrees
-/// $value: sec(45deg); => 1.4142135623
+/// $value: sec(45deg); // 1.4142135623
 ///
 @function sec($angle) {
   @return 1 / cos($angle);
@@ -93,7 +93,7 @@
 /// @return {number} The cosecant of `$angle`
 ///
 /// @example scss Determining the cosecant of 45 degrees
-/// $value: csc(45deg); => 1.4142135623
+/// $value: csc(45deg); // 1.4142135623
 ///
 @function csc($angle) {
   @return 1 / sin($angle);
@@ -109,7 +109,7 @@
 /// @return {number} The arc tangent of `$angle`
 ///
 /// @example scss Determining the arc tangent of 45 degrees
-/// $value: tan(45deg); => 1
+/// $value: tan(45deg); // 1
 ///
 @function tan($angle) {
   @return sin($angle) / cos($angle);
@@ -124,7 +124,7 @@
 /// @return {number} The contangent of `$angle`
 ///
 /// @example scss Determining the cotangent of 45 degrees
-/// $value: cot(45deg); => 1
+/// $value: cot(45deg); // 1
 ///
 @function cot($angle) {
   @return 1 / tan($angle);

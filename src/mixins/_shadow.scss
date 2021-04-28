@@ -9,10 +9,14 @@
 /// Whether or not to include a hover effect
 ///
 /// @example scss Including a shadow with no hover effect
-///   $shadow: @include shadow();
+/// .shadow {
+///   @include shadow();
+/// }
 ///
 /// @example scss Including a shadow with the hover effect
-///   $hover-effect-shadow: @include shadow(true);
+/// .hover-shadow{
+///   @include shadow(true);
+/// }
 ///
 @mixin shadow($hover: false) {
   box-shadow: 0 space(4) space(4) rgba(0, 0, 0, 0.23),

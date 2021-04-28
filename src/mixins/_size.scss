@@ -8,14 +8,14 @@
 /// The height of the element in px
 ///
 /// @example scss Creating a 4px by 4px box converted to REMs
-///   .square-box {
-///      @include size(4)
-///   }
+/// .square-box {
+///   @include size(4)
+/// }
 ///
 /// @example scss Creating a 4px by 10px rectangle converted to REMs
-///   .rectangle-box {
-///      @include size(4, 10)
-///   }
+/// .rectangle-box {
+///   @include size(4, 10)
+/// }
 ///
 @mixin size($width, $height: $width) {
   width: space($width);

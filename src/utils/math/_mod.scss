@@ -47,7 +47,7 @@ $LN2: 0.6931471806;
 /// @return {number} The rounded number
 ///
 /// @example scss Rounding a number to the second decimal place
-///   $value: toFixed(3.14159, 100) => 3.14
+///   $value: toFixed(3.14159, 100) // 3.14
 ///
 @function toFixed($number, $power){
   @return round($number * $power) / $power;
@@ -62,10 +62,10 @@ $LN2: 0.6931471806;
 /// @return {number} The value of the golden ratio times the base number
 ///
 /// @example scss Returning the original golden ratio value
-/// $value: goldenRatio(); => 1.6180339887
+/// $value: goldenRatio(); // 1.6180339887
 ///
 /// @example scss Multiplying the value of the golden ratio by 5
-/// $value: goldenRatio(5); => 8.0901699437
+/// $value: goldenRatio(5); // 8.0901699437
 ///
 @function goldenRatio($number: 1){
   @return (1/2 + sqrt(5) / 2) * $number;
@@ -82,7 +82,7 @@ $LN2: 0.6931471806;
 /// @return {number} The calculated exponent
 ///
 /// @example scss Calculating the second exponent of the number 2
-///   $value: pow(2, 2); => 4
+///   $value: pow(2, 2); // 4
 ///
 @function pow($number, $exp){
   $value: 1;
@@ -107,7 +107,7 @@ $LN2: 0.6931471806;
 /// @return {number} The calculated factorial
 ///
 /// @example scss Determining the factorial of 5
-/// $value: factorial(5); => 120
+/// $value: factorial(5); // 120
 ///
 @function factorial($number){
   $value: 1;
@@ -129,7 +129,7 @@ $LN2: 0.6931471806;
 /// @throws error
 ///
 /// @example scss Determining the radian for a 45 degree angle
-/// $value: radian(45deg); => 0.7853981634
+/// $value: radian(45deg); // 0.7853981634
 ///
 @function radian($angle) {
   $unit: unit($angle);
@@ -152,7 +152,7 @@ $LN2: 0.6931471806;
 /// @return {number} The square root of `$number`
 ///
 /// @example scss Calculating the square root of 144
-/// $value: sqrt(144); => 12
+/// $value: sqrt(144); // 12
 ///
 @function sqrt($number, $precision: 12){
   $guess: random(20);

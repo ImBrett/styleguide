@@ -30,6 +30,8 @@ $screen-large-desktop: 1440px;
 
 /// Prevents elements from overflowing on phone screens
 /// @type number
+/// @group Core
+///
 $screen-phone-max: $screen-phone - 1;
 
 /// Prevents elements from overflowing on tablets in portrait mode

@@ -41,7 +41,7 @@ $space-units: (
 /// @throws error
 ///
 /// @example scss Converting 24 pixels to REM
-///   $24-pixels-in-rem: space(24);
+/// $value: space(24); // 2.4rem
 ///
 @function space($space-unit: default) {
   @if map-has-key($space-units, $space-unit) {
