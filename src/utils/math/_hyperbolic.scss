@@ -1,13 +1,13 @@
 /// Determines the hyperbolic sine of a given number `$number`
 ///
 /// @author ImBrett
-/// @group math
+/// @group Math
 /// @arg {number} $number [null]
 /// The number to determine the hyperbolic sine of
 /// @return {number} The hyperbolic sine of `$number`
 ///
 /// @example scss Determining the hyperbolic sine of 1
-/// $value: sinh(1); => 1.1752011936
+/// $value: sinh(1); // 1.1752011936
 ///
 @function sinh($number) {
   $top: pow($E, (2 * $number)) - 1;
@@ -18,13 +18,13 @@
 /// Determines the hyperbolic cosine of a given number `$number`
 ///
 /// @author ImBrett
-/// @group math
+/// @group Math
 /// @arg {number} $number [null]
 /// The number to determine the hyperbolic cosine of
 /// @return {number} The hyperbolic cosine of `$number`
 ///
 /// @example scss Determining the hyperbolic cosine of 1
-/// $value: cosh(1); => 1.5430806348
+/// $value: cosh(1); // 1.5430806348
 ///
 @function cosh($number) {
   $top: pow($E, (2 * $number)) + 1;
@@ -35,13 +35,13 @@
 /// Determines the hyperbolic secant of a given number `$number`
 ///
 /// @author ImBrett
-/// @group math
+/// @group Math
 /// @arg {number} $number [null]
 /// The number to determine the hyperbolic secant of
 /// @return {number} The hyperbolic secant of `$number`
 ///
 /// @example scss Determining the hyperbolic secant of 1
-/// $value: sech(1); => 0.6480542737
+/// $value: sech(1); // 0.6480542737
 ///
 @function sech($number) {
   @return 1 / cosh($number);
@@ -50,13 +50,13 @@
 /// Determines the hyperbolic cosecant of a given number `$number`
 ///
 /// @author ImBrett
-/// @group math
+/// @group Math
 /// @arg {number} $number [null]
 /// The number to determine the hyperbolic cosecant of
 /// @return {number} The hyperbolic cosecant of `$number`
 ///
 /// @example scss Determining the hyperbolic cosecant of 1
-/// $value: csch(1); => 0.8509181282
+/// $value: csch(1); // 0.8509181282
 ///
 @function csch($number) {
   @return 1 / sinh($number);
@@ -65,13 +65,13 @@
 /// Determines the hyperbolic tangent of a given number `$number`
 ///
 /// @author ImBrett
-/// @group utility
+/// @group Math
 /// @arg {number} $number [null]
 /// The number to determine the hyperbolic tangent of
 /// @return {number} The hyperbolic tangent of `$number`
 ///
 /// @example scss Determining the hyperbolic tangent of 1
-/// $value: tanh(1); => 0.761594156
+/// $value: tanh(1); // 0.761594156
 ///
 @function tanh($number) {
   $top: pow($E, (2 * $number)) - 1;
@@ -82,13 +82,13 @@
 /// Determines the hyperbolic cotangent of a given number `$number`
 ///
 /// @author ImBrett
-/// @group math
+/// @group Math
 /// @arg {number} $number [null]
 /// The number to determine the hyperbolic cotangent of
 /// @return {number} The hyperbolic cotangent of `$number`
 ///
 /// @example scss Determining the hyperbolic cotangent of 1
-/// $value: coth(1); => 1.3130352855
+/// $value: coth(1); // 1.3130352855
 ///
 @function coth($number) {
   @return 1/ tanh($number);

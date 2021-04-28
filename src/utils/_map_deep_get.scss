@@ -2,11 +2,11 @@
 ///
 /// @author ImBrett
 /// @group utility
-/// @arg {map} $map [null]
+/// @arg {list} $map [null]
 /// The provided map
 /// @arg {string} $keys [null]
 /// The keys to search for
-/// @return {map}
+/// @return {list}
 ///
 /// @example scss
 ///   $map: (
@@ -14,7 +14,7 @@
 ///       'nested_key': 10px
 ///     )
 ///   );
-///   $var: map-deep-get($map, 'key', 'nested_key'); => 10px
+///   $var: map-deep-get($map, 'key', 'nested_key'); // 10px
 ///
 @function map-deep-get($map, $keys...) {
   @each $key in $keys {

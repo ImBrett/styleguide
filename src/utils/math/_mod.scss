@@ -3,35 +3,35 @@
 
 /// The value of PI
 /// @type number
-/// @group math
+/// @group Math
 /// @link https://en.wikipedia.org/wiki/Mathematical_constant#Archimedes'_constant_%CF%80
 ///
 $PI: 3.1415926535897932384626433832795028841971693993751;
 
 /// Eulers number
 /// @type number
-/// @group math
+/// @group Math
 /// @link https://en.wikipedia.org/wiki/Mathematical_constant#Euler's_number_e
 ///
 $E: 2.71828182845904523536028747135266249775724709369995;
 
 /// Pythagoras' constant
 /// @type number
-/// @group math
+/// @group Math
 /// @link https://en.wikipedia.org/wiki/Mathematical_constant#Pythagoras'_constant_%E2%88%9A2
 ///
 $PC: 1.4142135624;
 
 /// Theodorus' constant
 /// @type number
-/// @group math
+/// @group Math
 /// @link https://en.wikipedia.org/wiki/Square_root_of_3
 ///
 $TC: 1.7320508076;
 
 /// The natural log of the number 2
 /// @type number
-/// @group math
+/// @group Math
 /// @link https://en.wikipedia.org/wiki/Natural_logarithm_of_2
 ///
 $LN2: 0.6931471806;
@@ -39,7 +39,7 @@ $LN2: 0.6931471806;
 /// Rounds a number to a specific number of decimals
 ///
 /// @author ImBrett
-/// @group math
+/// @group Math
 /// @arg {number} $number [null]
 /// The number to round
 /// @arg {number} $power [null]
@@ -47,7 +47,7 @@ $LN2: 0.6931471806;
 /// @return {number} The rounded number
 ///
 /// @example scss Rounding a number to the second decimal place
-///   $value: toFixed(3.14159, 100) => 3.14
+///   $value: toFixed(3.14159, 100) // 3.14
 ///
 @function toFixed($number, $power){
   @return round($number * $power) / $power;
@@ -56,16 +56,16 @@ $LN2: 0.6931471806;
 /// Multiplies a number by the golden ratio
 ///
 /// @author ImBrett
-/// @group math
+/// @group Math
 /// @arg {number} $number [1]
 /// The base number to multiply the golden ratio by
 /// @return {number} The value of the golden ratio times the base number
 ///
 /// @example scss Returning the original golden ratio value
-/// $value: goldenRatio(); => 1.6180339887
+/// $value: goldenRatio(); // 1.6180339887
 ///
 /// @example scss Multiplying the value of the golden ratio by 5
-/// $value: goldenRatio(5); => 8.0901699437
+/// $value: goldenRatio(5); // 8.0901699437
 ///
 @function goldenRatio($number: 1){
   @return (1/2 + sqrt(5) / 2) * $number;
@@ -74,7 +74,7 @@ $LN2: 0.6931471806;
 /// Calculates the exponent `$exp` of a number `$number`
 ///
 /// @author ImBrett
-/// @group math
+/// @group Math
 /// @arg {number} $number [null]
 /// The base number
 /// @arg {number} $exp [null]
@@ -82,7 +82,7 @@ $LN2: 0.6931471806;
 /// @return {number} The calculated exponent
 ///
 /// @example scss Calculating the second exponent of the number 2
-///   $value: pow(2, 2); => 4
+///   $value: pow(2, 2); // 4
 ///
 @function pow($number, $exp){
   $value: 1;
@@ -101,13 +101,13 @@ $LN2: 0.6931471806;
 /// Calculates the factorial of a given number
 ///
 /// @author ImBrett
-/// @group math
+/// @group Math
 /// @arg {number} $number [null]
 /// The number to calculate a factorial for
 /// @return {number} The calculated factorial
 ///
 /// @example scss Determining the factorial of 5
-/// $value: factorial(5); => 120
+/// $value: factorial(5); // 120
 ///
 @function factorial($number){
   $value: 1;
@@ -122,14 +122,14 @@ $LN2: 0.6931471806;
 /// Derermines the radian for a given angle `$angle`
 ///
 /// @author ImBrett
-/// @group math
+/// @group Math
 /// @arg {number} $angle [null]
 /// The angle to determine the radian for
 /// @return {number} The angles radian
 /// @throws error
 ///
 /// @example scss Determining the radian for a 45 degree angle
-/// $value: radian(45deg); => 0.7853981634
+/// $value: radian(45deg); // 0.7853981634
 ///
 @function radian($angle) {
   $unit: unit($angle);
@@ -144,7 +144,7 @@ $LN2: 0.6931471806;
 /// Calculates the square root of a number
 ///
 /// @author ImBrett
-/// @group math
+/// @group Math
 /// @arg {number} $number [null]
 /// The number to find the square root of
 /// @arg {number} $precision [12]
@@ -152,7 +152,7 @@ $LN2: 0.6931471806;
 /// @return {number} The square root of `$number`
 ///
 /// @example scss Calculating the square root of 144
-/// $value: sqrt(144); => 12
+/// $value: sqrt(144); // 12
 ///
 @function sqrt($number, $precision: 12){
   $guess: random(20);
