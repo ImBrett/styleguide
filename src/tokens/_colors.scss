@@ -4,7 +4,7 @@
 /// reference for defining your own brands colors.
 ///
 /// @type map
-/// @group Core
+/// @group color
 ///
 $brand-colors: (
   primary: (
@@ -59,7 +59,7 @@ $brand-colors: (
 /// Sets a color and tone on a text element or background
 ///
 /// @author ImBrett
-/// @group Core
+/// @group color
 /// @arg {string} $color [null]
 /// The brand color to use
 /// @arg {string} $tone [default]

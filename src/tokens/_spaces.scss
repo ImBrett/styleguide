@@ -5,7 +5,7 @@
 /// consistent and generally better)number>
 ///
 /// @type map
-/// @group Core
+/// @group layout
 ///
 $space-units: (
   default: 0.8rem,
@@ -34,7 +34,7 @@ $space-units: (
 /// in the global styles to allow 1REM = 10px.
 ///
 /// @author ImBrett
-/// @group Core
+/// @group layout
 /// @parameter {number} $space-unit [8]
 /// The space unit to use in px
 /// @return {number} The space unit in px converted to REMs
