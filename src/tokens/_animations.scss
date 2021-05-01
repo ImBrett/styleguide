@@ -1,0 +1,34 @@
+/// The base duration for animations
+/// @type number
+/// @group animation
+///
+$animation-duration: 0.3s;
+
+/// The base delay for animations
+/// @type number
+/// @group animation
+///
+$animation-delay: 0.3s;
+
+/// The base number of times to repeat an animation
+/// @type number
+/// @group animation
+///
+$animation-repeat: infinite;
+
+/// Scaling animation keyframes
+/// @group animation
+///
+@keyframes scale {
+  0% { transform: scale(1) }
+  50% { transform: scale(1.04) }
+  100% { transform: scale(1) }
+}
+
+/// Fading animation keyframes
+/// @group animation
+///
+@keyframes fade {
+  0% { opacity: 0 }
+  100% { opacity: 1 }
+}

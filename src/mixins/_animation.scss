@@ -1,0 +1,31 @@
+/// Includes an animation on an element
+///
+/// @author ImBrett
+/// @group animation
+/// @arg {string} $name [null] - The name of the animation to use
+/// @arg {number} $duration [0.3s] - The duration of the animation
+/// @arg {number} $delay [0.3] - Time in seconds to delay the animation
+/// @arg {number} $repeat [infinite] - How many times to repeat the animation
+///
+/// @example scss Using a fade animation on an element
+/// .fade-animation {
+///   @include animation(fade)
+/// }
+///
+/// @example scss Advanced usage with custom settings
+/// .scale-animation {
+///   @include animation(scale, 2s, 0.3s, 3)
+/// }
+///
+@mixin animation(
+  $name,
+  $duration: $animation-duration,
+  $delay:    $animation-delay,
+  $repeat:   $animation-repeat)
+{
+  animation-fill-mode: both;
+  animation-name: $name;
+  animation-duration: $duration;
+  animation-delay: $delay;
+  animation-iteration-count: $repeat;
+}

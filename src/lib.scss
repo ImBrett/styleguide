@@ -1,9 +1,5 @@
 @import "general/reset";
 
-@import "utils/map_deep_get";
-
-@import "utils/math/mod";
-
 @import "tokens/spaces";
 
 @import "tokens/colors";
@@ -12,11 +8,13 @@
 
 @import "tokens/breakpoints";
 
+@import "tokens/animations";
+
 @import "mixins/media";
 
 @import "mixins/shadow";
 
-@import "mixins/size";
+@import "mixins/animation";
 
 @import "general/global";
 

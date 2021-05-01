@@ -1,0 +1,37 @@
+@import 'true';
+@import '../../src/tokens/animations';
+@import '../../src/mixins/animation';
+
+@include describe('Animation [mixin]') {
+  @include it('Applies animation styles with default settings') {
+    @include assert{
+      @include output{
+        @include animation(fade)
+      }
+
+      @include expect {
+        animation-fill-mode: both;
+        animation-name: fade;
+        animation-duration: 0.3s;
+        animation-delay: 0.3s;
+        animation-iteration-count: infinite;
+      }
+    }
+  }
+
+  @include it('Applies animation styles with custom settings') {
+    @include assert{
+      @include output{
+        @include animation(scale, 2s, 0.6s, 3)
+      }
+
+      @include expect {
+        animation-fill-mode: both;
+        animation-name: scale;
+        animation-duration: 2s;
+        animation-delay: 0.6s;
+        animation-iteration-count: 3;
+      }
+    }
+  }
+}
